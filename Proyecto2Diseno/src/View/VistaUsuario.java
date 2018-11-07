@@ -5,17 +5,100 @@
  */
 package View;
 
+import Controlador.DTO_CargarDatos;
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+
 /**
  *
  * @author Monserrath
  */
 public class VistaUsuario extends javax.swing.JFrame {
+    
+    DefaultListModel modelAnho = new DefaultListModel();
+    DefaultListModel modelProvincia = new DefaultListModel();
+    DefaultListModel modelCanton = new DefaultListModel();
+    DefaultListModel modelDistrito = new DefaultListModel();
+    DefaultListModel modelLesion = new DefaultListModel();
+    DefaultListModel modelEdades = new DefaultListModel();
+    DTO_CargarDatos dtoCD = new DTO_CargarDatos();
+    
 
     /**
      * Creates new form VistaUsuario
      */
+    
     public VistaUsuario() {
         initComponents();
+        
+        //Temporal para rellenar la interfaz
+        ArrayList año = new ArrayList();
+        año.add("2012");
+        año.add("2013");
+        año.add("2014");
+        ArrayList pro = new ArrayList();
+        pro.add("Limon");
+        ArrayList cant = new ArrayList();
+        cant.add("Siquirres");
+        cant.add("Parismina");
+        ArrayList dist = new ArrayList();
+        dist.add("Siquirres");
+        dist.add("Cocal");
+        dist.add("San Rafael");
+        dist.add("San Martin");
+        dist.add("Mira flores");
+        dist.add("Cairo");
+        dist.add("La Piedra");
+        dist.add("Cimarrones");
+        ArrayList les = new ArrayList();
+        les.add("Fractura Craneal");
+        les.add("Heridas Menores");
+        les.add("Fractura Rotula");
+        ArrayList edades = new ArrayList();
+        edades.add("15 - 20");
+        edades.add("21 - 26");
+        edades.add("27 - 32");
+
+        dtoCD.setAnho(año);
+        dtoCD.setProvincia(pro);
+        dtoCD.setCantones(cant);
+        dtoCD.setDistritos(dist);
+        dtoCD.setEdades(edades);
+        dtoCD.setLesion(les);
+        //---------------------------------
+        
+        for (String anho : dtoCD.getAnho()) {
+            modelAnho.addElement(anho);
+        }
+        jListDashAnho.setModel(modelAnho);
+        jListObserverAnho.setModel(modelAnho);
+        
+        for (String provincia : dtoCD.getProvincia()) {
+            modelProvincia.addElement(provincia);
+        }
+        jListDashProvincia.setModel(modelProvincia);
+        jListObserverProvincia.setModel(modelProvincia);
+        
+        for (String cantones : dtoCD.getCantones()) {
+            modelCanton.addElement(cantones);
+        }
+        jListDashCanton.setModel(modelCanton);
+        
+        for (String distrito : dtoCD.getDistritos()) {
+            modelDistrito.addElement(distrito);
+        }
+        jListDashDistrito.setModel(modelDistrito);
+        
+        for (String edad : dtoCD.getEdades()) {
+            modelEdades.addElement(edad);
+        }
+        jListDashEdades.setModel(modelEdades);
+        
+        for (String lesion : dtoCD.getLesion()) {
+            modelLesion.addElement(lesion);
+        }
+        jListDashLesion.setModel(modelLesion);
+        jListObserverLesion.setModel(modelLesion);
     }
 
     /**
@@ -69,13 +152,13 @@ public class VistaUsuario extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
         jScrollPane9 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jListObserverAnho = new javax.swing.JList<>();
         jLabel13 = new javax.swing.JLabel();
         jScrollPane10 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        jListObserverProvincia = new javax.swing.JList<>();
         jLabel14 = new javax.swing.JLabel();
         jScrollPane11 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        jListObserverLesion = new javax.swing.JList<>();
         jPanel9 = new javax.swing.JPanel();
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -187,19 +270,22 @@ public class VistaUsuario extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jCheckBoxDashMas)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jCheckBoxDashFem))
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel6)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel6Layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jCheckBoxDashMas)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jCheckBoxDashFem))
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel4))
+                        .addGap(0, 8, Short.MAX_VALUE))
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -295,7 +381,7 @@ public class VistaUsuario extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -370,20 +456,20 @@ public class VistaUsuario extends javax.swing.JFrame {
         jLabel12.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel12.setText("Año");
 
-        jList1.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
-        jScrollPane9.setViewportView(jList1);
+        jListObserverAnho.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        jScrollPane9.setViewportView(jListObserverAnho);
 
         jLabel13.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel13.setText("Provincia");
 
-        jList2.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
-        jScrollPane10.setViewportView(jList2);
+        jListObserverProvincia.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        jScrollPane10.setViewportView(jListObserverProvincia);
 
         jLabel14.setFont(new java.awt.Font("Segoe UI Light", 1, 14)); // NOI18N
         jLabel14.setText("Tipo de Lesion");
 
-        jList3.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
-        jScrollPane11.setViewportView(jList3);
+        jListObserverLesion.setFont(new java.awt.Font("Segoe UI Light", 0, 12)); // NOI18N
+        jScrollPane11.setViewportView(jListObserverLesion);
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -520,15 +606,15 @@ public class VistaUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jListDashAnho;
     private javax.swing.JList<String> jListDashCanton;
     private javax.swing.JList<String> jListDashDistrito;
     private javax.swing.JList<String> jListDashEdades;
     private javax.swing.JList<String> jListDashLesion;
     private javax.swing.JList<String> jListDashProvincia;
+    private javax.swing.JList<String> jListObserverAnho;
+    private javax.swing.JList<String> jListObserverLesion;
+    private javax.swing.JList<String> jListObserverProvincia;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
