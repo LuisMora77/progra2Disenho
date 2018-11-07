@@ -111,6 +111,9 @@ public class VistaUsuario extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -147,7 +150,14 @@ public class VistaUsuario extends javax.swing.JFrame {
         jTextArea2 = new javax.swing.JTextArea();
         jPanel3 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList<>();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList<>();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
@@ -171,6 +181,13 @@ public class VistaUsuario extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane13.setViewportView(jList1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -381,7 +398,7 @@ public class VistaUsuario extends javax.swing.JFrame {
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -391,35 +408,82 @@ public class VistaUsuario extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(128, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Dashboard", jPanel1);
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Indicadores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 1, 18))); // NOI18N
 
+        jList2.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Numero de registro", "Codigo de provincia", "Provincia", "Canton", "Distrito", "Dia", "Mes", "Año", "Codigo", "Rol", "Codigo de Lesion", "Tipo de Lesion", "Edad", "Edad Quinquenal\t", "Codigo de sexo", "Sexo" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane14.setViewportView(jList2);
+
+        jList3.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "San Jose", "Cartago", "Limon", "Heredia", "Puntarenas", "Guanacaste", "Alajuela" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane15.setViewportView(jList3);
+
+        jLabel11.setText("Indicador principal");
+
+        jLabel15.setText("Indicador Secundario");
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 237, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane15)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane14, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel15))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addGap(4, 4, 4)
+                .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel15)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fuentes/Capture.PNG"))); // NOI18N
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 653, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jLabel16)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(86, 86, 86)
+                .addComponent(jLabel16)
+                .addContainerGap(97, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -501,7 +565,7 @@ public class VistaUsuario extends javax.swing.JFrame {
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
 
         jPanel9.setBackground(new java.awt.Color(243, 211, 184));
@@ -511,7 +575,7 @@ public class VistaUsuario extends javax.swing.JFrame {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 910, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -595,9 +659,12 @@ public class VistaUsuario extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBoxDashMas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -606,6 +673,9 @@ public class VistaUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JList<String> jList2;
+    private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jListDashAnho;
     private javax.swing.JList<String> jListDashCanton;
     private javax.swing.JList<String> jListDashDistrito;
@@ -629,6 +699,10 @@ public class VistaUsuario extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
