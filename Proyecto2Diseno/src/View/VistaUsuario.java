@@ -413,6 +413,9 @@ public class VistaUsuario extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Dashboard", jPanel1);
 
+        jPanel3.setBackground(new java.awt.Color(165, 195, 207));
+
+        jPanel10.setBackground(new java.awt.Color(205, 205, 192));
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Indicadores", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI Light", 1, 18))); // NOI18N
 
         jList2.setModel(new javax.swing.AbstractListModel<String>() {
@@ -465,6 +468,7 @@ public class VistaUsuario extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
+        jPanel11.setBackground(new java.awt.Color(221, 188, 149));
         jPanel11.setBorder(javax.swing.BorderFactory.createEtchedBorder(javax.swing.border.EtchedBorder.RAISED));
 
         jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fuentes/Capture.PNG"))); // NOI18N
@@ -473,17 +477,17 @@ public class VistaUsuario extends javax.swing.JFrame {
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(117, 117, 117)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(174, Short.MAX_VALUE)
                 .addComponent(jLabel16)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addGap(115, 115, 115))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel11Layout.createSequentialGroup()
-                .addGap(86, 86, 86)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
                 .addComponent(jLabel16)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addGap(89, 89, 89))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -505,7 +509,7 @@ public class VistaUsuario extends javax.swing.JFrame {
                         .addGap(33, 33, 33)
                         .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
+                        .addGap(34, 34, 34)
                         .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
