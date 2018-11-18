@@ -13,10 +13,12 @@ public class Gestor_DAO {
     private DAO dao;
     
     public void obtenerDatos(DTO dto){
+        //obtiene TODOS los datos
         
     }
     
-    public void actualziarDatos(DTO dto){
+    public void filtrarDatos(DTO dto){
+        //filtra los datos según los que hay en el DTO
         
     }
     

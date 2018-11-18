@@ -23,11 +23,11 @@ public class Controlador {
     }
     
     public void solicitarDatos(DTO dto){
-        
+        this.gDao.obtenerDatos(dto);
     }
     
     public void filtrarDatos(DTO dto){
-        
+        this.gDao.filtrarDatos(dto);
     }
     
     public void solicitarMapa(DTO dto){
