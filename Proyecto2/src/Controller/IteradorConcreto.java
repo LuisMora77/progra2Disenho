@@ -14,13 +14,35 @@ import java.util.ArrayList;
 public class IteradorConcreto extends Iterador{
 
     public IteradorConcreto(ArrayList<ArrayList<String>> lista){
-        super.lista = lista;
+        this.lista = lista;
     }
 
     @Override
     public int getCantOcurrencias(ArrayList<String> caracteristicas) {
-        //obtener el numero de ocurrencias en la lista
-        return 0;
+        int ocurrencias = 0;
+        
+        for(int i=0; i<this.lista.size(); i++){
+            ArrayList<String> accidente = this.lista.get(i);
+            boolean resultado = contiene(accidente,caracteristicas);
+            if(resultado)
+                ocurrencias++;
+        }
+        
+        return ocurrencias;
     }
     
+    private boolean contiene(ArrayList<String> accidente, ArrayList<String> caract){
+        outer:
+        for (int i=0; i<caract.size(); i++) {
+            String a = caract.get(i);
+            for (int j=0; j<accidente.size(); j++) {
+                String b = accidente.get(j);
+                if (a.equalsIgnoreCase(b)) {
+                    continue outer;
+                }
+            }
+            return false;
+        }
+        return true;
+    }
 }

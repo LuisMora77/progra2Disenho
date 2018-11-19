@@ -5,12 +5,17 @@
  */
 package Controller;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Usuario
  */
 public class Lista extends Agregado{
 
+    public Lista(ArrayList<ArrayList<String>> accidentes){
+        super.accidentes = accidentes;
+    }
     @Override
     public Iterador obtenerIterador() {
         return new IteradorConcreto(super.accidentes);

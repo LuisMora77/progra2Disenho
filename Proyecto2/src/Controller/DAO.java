@@ -13,6 +13,9 @@ import java.util.ArrayList;
  */
 public class DAO {
     public ArrayList<ArrayList<String>> ejecutarQuerry(String querry){
+        //se debe "ejecutar" el string que entra y devolver los datos en un array de arrays
+        //si es un catalogo, debe ir todo en un array de n dimension, y ese array dentro de un array de dimension 1
+        //si son todos los datos, debe ir cada fila en un array y todos esos arrays dentro del otro array
         return null;
     }
 }

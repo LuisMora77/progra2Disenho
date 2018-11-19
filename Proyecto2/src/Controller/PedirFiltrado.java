@@ -13,6 +13,11 @@ public class PedirFiltrado extends Peticion{
     private String filtro;
     private Peticion peticion;
     
+    public PedirFiltrado (String filtro, Peticion peti){
+        this.filtro = filtro;
+        this.peticion = peti;
+    }
+    
     @Override
     public String obtenerQuerry() {
         //se debe eliminar el ; del final y si Peticion es de tipo PedirFiltrado, no agregar el where

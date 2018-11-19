@@ -23,22 +23,27 @@ public class Controlador {
     }
     
     public void solicitarDatos(DTO dto){
-        this.gDao.obtenerDatos(dto);
+        //solicita todos los datos de los catalogos
+        this.gDao.obtenerCatalogos(dto);
     }
     
     public void filtrarDatos(DTO dto){
+        //filtra los datos de un catalogo segun los actualmente seleccionados
         this.gDao.filtrarDatos(dto);
     }
     
     public void solicitarMapa(DTO dto){
-        
+        //solicita la ventana del mapa
+        this.gMapa.generarMapa(dto);
     }
     
     public void solicitarIndicador(DTO dto){
-        
+        //solicita el gráfico de un indicador
+        this.gIndicador.generarGrafico(dto);
     }
     
     public void update(DTO dto){
-        
+        //actualiza/regenera el gráfico
+        this.gPersonalizado.actualizarGrafico(dto);
     }
 }

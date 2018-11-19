@@ -13,8 +13,8 @@ public class PedirTodo extends Peticion{
 
     private String querryBase;
 
-    public PedirTodo() {
-        this.querryBase = "";       //definir el querry de Select * from table
+    public PedirTodo(String tabla) {
+        this.querryBase = "";       //definir el querry de Select * from tabla
     }
     
     @Override
