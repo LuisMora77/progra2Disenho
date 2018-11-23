@@ -3650,7 +3650,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
-  max-height: 400px;
+  max-height: 300px;
   margin-bottom: 10px;
   overflow:scroll;
   -webkit-overflow-scrolling: touch;

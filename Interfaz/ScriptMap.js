@@ -1,3 +1,10 @@
+var listaProvincias;
+var listaDistrito;
+var listaCanton;
+var listaLesion;
+var listaEdad;
+var listaAnno;
+
 function marcador(lat, lng){
       
     var marker = new google.maps.Marker({
@@ -57,7 +64,7 @@ function diagramas (){
             borderWidth: 1
         }]
     },
-    options: {
+        options: {
         scales: {
             yAxes: [{
                 ticks: {
@@ -65,6 +72,16 @@ function diagramas (){
                 }
             }]
         }
-    }
-});
+        }
+    });
+}
+
+function crearLista(){
+    var prueba = $("#provi1");
+    prueba.prepend('<a href="#" class="list-group-item list-group-item-action">' +'ohana'+ '</a>');
+}
+
+
+function mainCargador(){
+    
 }
