@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
   <script src="jquery-3.2.0.min.js"></script>
   <script src="ScriptMap.js"></script>
-  <script sr ="Chart.js"> </script>
+  <script src="Chart.js"></script>
   <link rel="stylesheet" href="PaginaPrincipal.css">
 </head>
 
@@ -58,7 +58,7 @@
       </div>
     </div>
   </div>
-  <div class="py-5 text-center text-md-right section-aquamarine" style="	background-image: url(assets/Imagenes/map.jpg);	background-position: right bottom;	background-size: cover;	background-repeat: repeat;	background-attachment: fixed;">
+  <div class="py-5 text-center text-md-right section-aquamarine" style="background-image: url(&quot;assets/Imagenes/map.jpg&quot;); background-position: right bottom; background-size: cover; background-repeat: repeat; background-attachment: fixed;">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -126,7 +126,7 @@
         <div class="col-md-6" style="">
           <div class="row">
             <div class="col-md-6"><a class="btn btn-info btn-lg btn-block" onclick="CrearMarcadores()">Crear Marcadores<br></a></div>
-            <div class="col-md-6"></div>
+            <div class="col-md-6"><a class="btn btn-secondary btn-lg btn-block" href="#">Borrar&nbsp; Selección</a></div>
           </div>
         </div>
         <div class="col-md-6">
@@ -175,7 +175,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4" style="">
               <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action active"> Indicador Principal</a>
                 <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
@@ -184,7 +184,7 @@
                 <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="">
               <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action active"> Indicador Secundario</a>
                 <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
@@ -193,7 +193,7 @@
                 <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4" style="">
               <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-action active">Tercer Indicador</a>
                 <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
@@ -204,7 +204,23 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12"></div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6"><a class="btn btn-info btn-lg btn-block" onclick ="diagramas()">Crear Grafico</a></div>
+                <div class="col-md-6"><a class="btn btn-secondary btn-block btn-lg" href="#">Borrar Selección</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row" id="grafico">
+          <canvas id="myChart" width="400" height="400"></canvas>
           </div>
         </div>
       </div>
