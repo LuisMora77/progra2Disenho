@@ -13,6 +13,6 @@ import java.util.ArrayList;
  */
 public class Grafico {
     public void crearGrafico(ArrayList<String> datos){
-        
+        System.out.println("\n"+datos+"\n");
     }
 }

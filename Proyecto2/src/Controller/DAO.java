@@ -18,4 +18,9 @@ public class DAO {
         //si son todos los datos, debe ir cada fila en un array y todos esos arrays dentro del otro array
         return null;
     }
+    
+    public String obtenerCoordenadas(String tabla, String nombre){
+        //Se debe seleccionar las coordenadas de la Tabla donde el dato Nombre coincida con el deseado
+        return "101:102";
+    }
 }

@@ -1,4 +1,6 @@
 
+import Controller.Controlador;
+import Controller.DTO;
 import Controller.IteradorConcreto;
 import java.util.ArrayList;
 
@@ -13,38 +15,53 @@ import java.util.ArrayList;
  * @author Usuario
  */
 public class prueba {
-//    public static void main(String arcs[]){
-//        ArrayList<ArrayList<String>> afuera = new ArrayList();
-//        ArrayList<String> adentro = new ArrayList();
-//        adentro.add("heredia");
-//        adentro.add("atropello");
-//        adentro.add("muerto");
-//        adentro.add("hombre");
-//        afuera.add(adentro);
-//        adentro = new ArrayList();
-//        adentro.add("Alajuela");
-//        adentro.add("choque");
-//        adentro.add("herido");
-//        adentro.add("hombre");
-//        afuera.add(adentro);
-//        adentro = new ArrayList();
-//        adentro.add("Cartago");
-//        adentro.add("choque");
-//        adentro.add("muerto");
-//        adentro.add("mujer");
-//        afuera.add(adentro);
-//        adentro = new ArrayList();
-//        adentro.add("heredia");
-//        adentro.add("atropello");
-//        adentro.add("herido");
-//        adentro.add("mujer");
-//        afuera.add(adentro);
+    
+//    public static void main(String args[]){
+//        Controlador controlar = new Controlador();
+//        DTO dto = new DTO();
 //        
-//        IteradorConcreto it = new IteradorConcreto(afuera);
-//        ArrayList<String> prueba = new ArrayList();
-//        prueba.add("mujer");
-//        prueba.add("muerto");
+//        //---prueba Indicador---
+//        dto.setIndicador("Anhos");
+//        controlar.solicitarIndicador(dto);
 //
-//        System.out.println(it.getCantOcurrencias(prueba));
+//        dto.setIndicador("Provincias");
+//        controlar.solicitarIndicador(dto);
+//
+//        dto.setIndicador("Lesiones");
+//        controlar.solicitarIndicador(dto);
+//
+//        //---prueba Personalizado---
+//        ArrayList<String> data = new ArrayList();
+//        data.add("2012"); data.add("2013"); dto.setAnhos(data);
+//        data = new ArrayList();
+//        data.add("Heredia"); data.add("Alajuela"); dto.setProvincias(data);
+//        data = new ArrayList();
+//        data.add("Automovil"); data.add("Motocicleta"); dto.setTipoAfectado(data);
+//        data = new ArrayList();
+//        data.add("Muerto"); dto.setLesiones(data);
+//        controlar.update(dto);
+//                System.out.println("\n\n");
+//        data = new ArrayList();
+//        data.add("Todas"); dto.setAnhos(data);
+//        data = new ArrayList();
+//        data.add("Heredia"); data.add("Alajuela"); dto.setProvincias(data);
+//        data = new ArrayList();
+//        data.add("Automovil"); data.add("Motocicleta"); dto.setTipoAfectado(data);
+//        data = new ArrayList();
+//        data.add("Herido"); dto.setLesiones(data);
+//        controlar.update(dto);
+//
+//        //---prueba Mapa---
+//        //ArrayList<String> data = new ArrayList();
+//        data = new ArrayList();
+//        data.add("Todas");  dto.setAnhos(data); dto.setMeses(data); dto.setDias(data);
+//                            dto.setEdadQuinquenal(data); dto.setSexo(data);
+//        data = new ArrayList();
+//        data.add("Heredia"); data.add("Alajuela"); dto.setProvincias(data);
+//        data = new ArrayList();
+//        data.add("Automovil"); data.add("Motocicleta"); dto.setTipoAfectado(data);
+//        data = new ArrayList();
+//        data.add("Muerto"); dto.setLesiones(data);
+//        controlar.solicitarMapa(dto);
 //    }
 }

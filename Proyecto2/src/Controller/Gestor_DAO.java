@@ -53,18 +53,18 @@ public class Gestor_DAO {
     
     public ArrayList<ArrayList<String>> obtenerTodosLosDatos(){
         //obtiene todos los datos de la tabla general
-        Peticion solicitud = new PedirTodo("Tabla");        //Esto debe ser de la tabla en la que están los datos
+        Peticion solicitud = new PedirTodo("TABACCIDENTES");        //Esto debe ser de la tabla en la que están los datos
         ArrayList<ArrayList<String>> datos = this.dao.ejecutarQuerry(solicitud.obtenerQuerry());
         return datos;
     }
     
     public void filtrarDatos(DTO dto){
         //filtra los catalogos según los que hay en el DTO
-        if(dto.getCantones().size() == 0){
+        if(dto.getCantones().isEmpty()){
             //no hay cantones seleccionados, hay que filtrarlos
             if(dto.getProvincias().size() == 1){
                 //seleccionar los cantones pertenecientes a una unica provincia
-                Peticion solicitud = new PedirTodo("Provincias");
+                Peticion solicitud = new PedirTodo("Cantones");
                 solicitud = new PedirFiltrado(dto.getProvincias().get(0),solicitud);
                 ArrayList<ArrayList<String>> datos = this.dao.ejecutarQuerry(solicitud.obtenerQuerry());
                 dto.setCantones(datos.get(0));
@@ -75,7 +75,7 @@ public class Gestor_DAO {
             }
         } else  if(dto.getCantones().size() == 1){
             //seleccionar los distritos  pertenecientes a un unico canton
-            Peticion solicitud = new PedirTodo("Cantones");
+            Peticion solicitud = new PedirTodo("Distritos");
             solicitud = new PedirFiltrado(dto.getCantones().get(0),solicitud);
             ArrayList<ArrayList<String>> datos = this.dao.ejecutarQuerry(solicitud.obtenerQuerry());
             dto.setDistritos(datos.get(0));
@@ -85,9 +85,13 @@ public class Gestor_DAO {
     }
     
     public int obtenerTotal(){
-        Peticion solicitud = new PedirTodo("Tabla");        //Esto debe ser de la tabla en la que están los datos
+        Peticion solicitud = new PedirTodo("TABACCIDENTES");        //Esto debe ser de la tabla en la que están los datos
         ArrayList<ArrayList<String>> datos = this.dao.ejecutarQuerry(solicitud.obtenerQuerry());
         int total = datos.size();
         return total;
+    }
+    
+    public String obtenerCoordenadas(String tabla, String nombre){
+        return this.dao.obtenerCoordenadas(tabla, nombre);
     }
 }

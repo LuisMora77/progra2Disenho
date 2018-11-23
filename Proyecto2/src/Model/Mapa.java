@@ -13,6 +13,6 @@ import java.util.ArrayList;
  */
 public class Mapa {
     public void crearMapa(ArrayList<String> datos){
-        
+        System.out.println("\n"+datos+"\n");
     }
 }
