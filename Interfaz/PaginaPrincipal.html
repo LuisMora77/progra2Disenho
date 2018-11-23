@@ -25,6 +25,7 @@
           <li class="nav-item"> <a class="nav-link" href="#">Vista1</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#">Vista2</a> </li>
           <li class="nav-item"> <a class="nav-link" href="#">Vista3</a> </li>
+          <li class="nav-item"> <a class="nav-link" onclick="mainCargador()">Carga</a></li>
         </ul>
       </div>
     </div>
@@ -67,11 +68,11 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="list-group" id="cant1">
+          <div class="list-group" id="can1">
           </div>
         </div>
-        <div class="col-md-4" id="dis1">
-          <div class="list-group">
+        <div class="col-md-4">
+          <div class="list-group" id="dis1">
           </div>
         </div>
       </div>
@@ -82,10 +83,10 @@
               <h1 style="	background-image: linear-gradient(to bottom, rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;" contenteditable="true">Provincia</h1>
             </div>
             <div class="col-md-4">
-              <h1 class="" style="	background-image: linear-gradient(to bottom, rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Distrito</h1>
+              <h1 class="" style="	background-image: linear-gradient(to bottom, rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Canton</h1>
             </div>
             <div class="col-md-4">
-              <h1 class="" style="	background-image: linear-gradient(to bottom,rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Cantón</h1>
+              <h1 class="" style="	background-image: linear-gradient(to bottom,rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Distrito</h1>
             </div>
           </div>
         </div>
@@ -98,7 +99,7 @@
           </div>
         </div>
         <div class="col-md-4">
-          <div class="list-group" id="ed1">
+          <div class="list-group" id="edad1">
           </div>
         </div>
         <div class="col-md-4">
@@ -127,7 +128,7 @@
         <div class="col-md-12" style="">
           <div class="row">
             <div class="col-md-6"><a class="btn btn-info btn-lg btn-block" onclick="CrearMarcadores()">Crear Marcadores<br></a></div>
-            <div class="col-md-6"><a class="btn btn-secondary btn-lg btn-block" onclick="crearLista()">Borrar&nbsp; Selección</a></div>
+            <div class="col-md-6"><a class="btn btn-secondary btn-lg btn-block">Borrar&nbsp; Selección</a></div>
           </div>
         </div>
       </div>
@@ -176,11 +177,11 @@
               </div>
             </div>
             <div class="col-md-4" style="">
-              <div class="list-group" id="dis2">
+              <div class="list-group" id="can2">
               </div>
             </div>
             <div class="col-md-4" style="">
-              <div class="list-group" id="can2">
+              <div class="list-group" id="dis2">
               </div>
             </div>
           </div>
@@ -193,10 +194,10 @@
                       <h1 class="">Provincia</h1>
                     </div>
                     <div class="col-md-4">
-                      <h1 class="">Distrito</h1>
+                      <h1 class="">Cantón</h1>
                     </div>
                     <div class="col-md-4">
-                      <h1 class="">Cantón</h1>
+                      <h1 class="">Distrito</h1>
                     </div>
                   </div>
                 </div>
@@ -213,7 +214,7 @@
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <div class="list-group" id="ed2">
+                      <div class="list-group" id="edad2">
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -277,11 +278,11 @@
               </div>
             </div>
             <div class="col-md-4">
-              <div class="list-group" id="dis3">
+              <div class="list-group" id="can3">
               </div>
             </div>
             <div class="col-md-4">
-              <div class="list-group" id="can3">
+              <div class="list-group" id="dis3">
               </div>
             </div>
           </div>
@@ -292,10 +293,10 @@
                   <h1 class="" style="	background-image: linear-gradient(to bottom,rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Provincia</h1>
                 </div>
                 <div class="col-md-4">
-                  <h1 class="" style="	background-image: linear-gradient(to bottom, rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Distrito</h1>
+                  <h1 class="" style="	background-image: linear-gradient(to bottom, rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Cantón</h1>
                 </div>
                 <div class="col-md-4">
-                  <h1 class="" style="	background-image: linear-gradient(to bottom, rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Cantón</h1>
+                  <h1 class="" style="	background-image: linear-gradient(to bottom, rgba(178,71,62,0.5), rgba(178,71,62,0.5));	background-position: top left;	background-size: 100%;	background-repeat: repeat;">Distrito</h1>
                 </div>
               </div>
             </div>
@@ -308,7 +309,7 @@
                   </div>
                 </div>
                 <div class="col-md-4">
-                  <div class="list-group" id="ed3">
+                  <div class="list-group" id="edad3">
                   </div>
                 </div>
                 <div class="col-md-4">

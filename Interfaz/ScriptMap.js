@@ -1,9 +1,9 @@
-var listaProvincias;
-var listaDistrito;
-var listaCanton;
-var listaLesion;
-var listaEdad;
-var listaAnno;
+var listaProvincias =["Limons", "Cartago", "San Jose", "Guanacaste", "Alajuela", "Heredia", "Puntarenas"];
+var listaDistrito =["Siquirres", "Limón", "Occidente","HoneCreek", "Talamanca", "Cairo"];
+var listaCanton=["Cocal", "Parismina", "Colon", "Siquirres", "Limon", "Guapiles", "Pococi"];
+var listaLesion=["Herida grave", "Herida leve", "Contución"];
+var listaEdad=["25-30", "30-35","35-40"];
+var listaAnno=["2012", "2013", "2014", "2015"];
 
 function marcador(lat, lng){
       
@@ -76,12 +76,84 @@ function diagramas (){
     });
 }
 
-function crearLista(){
-    var prueba = $("#provi1");
-    prueba.prepend('<a href="#" class="list-group-item list-group-item-action">' +'ohana'+ '</a>');
+function crearListaProvincia(){
+    var temp;
+    for(let i = 0; i < listaProvincias.length; i++){
+        temp = $("#provi1");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaProvincias[i]+ '</a>');
+        temp = $("#provi2");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaProvincias[i]+ '</a>');
+        temp = $("#provi3");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaProvincias[i]+ '</a>');
+    }
+}
+
+function crearListaCanton(){
+    var temp
+    for(let i = 0; i < listaCanton.length; i++){
+        temp = $("#can1");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaCanton[i]+ '</a>');
+        temp = $("#can2");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaCanton[i]+ '</a>');
+        temp = $("#can3");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaCanton[i]+ '</a>');
+    }
+}
+
+function crearListaDistrito(){
+    var temp;
+    for(let i = 0; i < listaDistrito.length; i++){
+        temp = $("#dis1");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaDistrito[i]+ '</a>');
+        temp = $("#dis2");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaDistrito[i]+ '</a>');
+        temp = $("#dis3");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaDistrito[i]+ '</a>');
+    }
+}
+
+function crearListasLesiones(){
+    var temp;
+    for(let i = 0; i < listaLesion.length; i++){
+        temp = $("#le1");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaLesion[i]+ '</a>');
+        temp = $("#le2");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaLesion[i]+ '</a>');
+        temp = $("#le3");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaLesion[i]+ '</a>');
+    }
+}
+
+function crearListaEdades(){
+    var temp;
+    for(let i = 0; i < listaEdad.length; i++){
+        temp = $("#edad1");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaEdad[i]+ '</a>');
+        temp = $("#edad2");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaEdad[i]+ '</a>');
+        temp = $("#edad3");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaEdad[i]+ '</a>');
+    }
+}
+
+function crearListaAn(){
+    var temp;
+    for(let i = 0; i < listaAnno.length; i++){
+        temp = $("#an1");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaAnno[i]+ '</a>');
+        temp = $("#an2");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaAnno[i]+ '</a>');
+        temp = $("#an3");
+        temp.prepend('<a href="#" class="list-group-item list-group-item-action">' +listaAnno[i]+ '</a>');
+    }
 }
 
 
 function mainCargador(){
-    
+    crearListaProvincia();
+    crearListaCanton();
+    crearListaDistrito();
+    crearListasLesiones();
+    crearListaEdades();
+    crearListaAn();
 }
